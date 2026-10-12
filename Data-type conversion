@@ -1,0 +1,4 @@
+//STRING COERCION
+
+let result = "5" + 1;
+console.log(result);

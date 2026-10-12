@@ -1,0 +1,23 @@
+const age = 17;
+const result = age >= 18 ? "Adult" : "Minor";
+console.log(result);
+
+const isLoggedIn = false;
+const message = isLoggedIn ? "Welcome Back" : "Please Log In";
+console.log(message);
+
+// NESTED TERNARY OPERATORS
+const grade = 50;
+const score = grade >= 90 ? "A" : grade >= 70 ? "B" : grade >= 60 ? "C" : "F";
+console.log(score);
+
+
+
+const num1 = 3;
+const num2 = 7;
+const sum = num1 +  num2;
+
+const isOddOrEven = sum % 2 !== 0? " The sum is odd" : "The sum is even";console.log(num1);
+console.log(num2);
+console.log(sum);
+console.log(isOddOrEven);

@@ -1,0 +1,18 @@
+// MUTABILITY
+let fruits = [ "apple", "pawpaw",];
+fruits.push("pera");
+console.log(fruits);
+
+// IMMUTABILITY
+let name = "John";
+name = "Doe";
+console.log(name);
+
+let name2 = "Peter";
+name2.toUpperCase();
+console.log(name2);
+
+let name3 = "Mary";
+name3.toUpperCase();
+name3 = name3.toUpperCase();
+console.log(name3);
