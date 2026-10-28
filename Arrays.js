@@ -122,6 +122,7 @@ console.log(res);
 const splicegadgets1 = gadgets.splice(1,3,);
 
 console.log(splicegadgets1);
+console.log(gadgets);
 
 
 
