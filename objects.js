@@ -153,3 +153,75 @@ console.log(person1.greet());
 
                     //    OBJECTS METHODS
                     
+                        //  OBJECT.KEYS()
+// The Object.keys() method is a built-in method in JavaScript that returns an array of a given object's own enumerable property names, in the same order as we get with a normal loop.
+
+let person2 = {
+    name : "Amaka",
+    age: 30,
+    city: "Lagos"
+};
+let keys = Object.keys(person2);
+console.log(keys);
+// The output would be ["name", "age", "city"] because the Object.keys() method has been called on the person2 object, and it returns an array of the object's own enumerable property names.
+
+
+Object.keys(person2).forEach(key =>{
+    console.log(key + ": " + person2[key]);
+});
+
+// The output would be name: Amaka, age: 30, city: Lagos because the Object.keys() method has been called on the person2 object, and it returns an array of the object's own enumerable property names. The forEach() method is then used to iterate over the array of keys, and for each key, the corresponding value is accessed using bracket notation and logged to the console.
+
+
+                            // OBJECT.VALUES()
+// The Object.values() method is a built-in method in JavaScript that returns an array of a given object's own enumerable property values, in the same order as we get with a normal loop.
+
+let values = Object.values(person2);
+console.log(values);
+// The output would be ["Amaka", 30, "Lagos"] because the Object.values() method has been called on the person2 object, and it returns an array of the object's own enumerable property values.
+
+let scores = {
+    math: 90,
+    english: 80,
+    science: 70
+};
+
+let totalScore = Object.values(scores).reduce((sum, score) => sum + score, 0);
+console.log(totalScore);
+// The output would be 240 because the Object.values() method has been called on the scores object, and it returns an array of the object's own enumerable property values. The reduce() method is then used to calculate the total score by adding all the values in the array.
+
+
+                            // OBJECT.ENTRIES()
+// The Object.entries() method is a built-in method in JavaScript that returns an array of a given object's own enumerable property [key, value] pairs, in the same order as we get with a normal loop.
+
+let entries = Object.entries(person2);
+console.log(entries);
+// The output would be [["name", "Amaka"], ["age", 30], ["city", "Lagos"]] because the Object.entries() method has been called on the person2 object, and it returns an array of the object's own enumerable property [key, value] pairs.
+
+for (let [key, value] of Object.entries(person2)) {
+    console.log(`${key}: ${value}`);
+};
+
+// The output would be name: Amaka, age: 30, city: Lagos because the Object.entries() method has been called on the person2 object, and it returns an array of the object's own enumerable property [key, value] pairs. The for...of loop is then used to iterate over the array of entries, and for each entry, the key and value are destructured and logged to the console.
+
+        //   OBJECT.ASSIGN()
+// The Object.assign() method is a built-in method in JavaScript that copies the values of all enumerable own properties from one or more source objects to a target object. It returns the target object.
+
+let target = { a: 1, b: 2 };
+let source = { b: 4, c: 5 };
+Object.assign(target, source);
+console.log(target);
+// The output would be { a: 1, b: 4, c: 5 } because the Object.assign() method has been called with the target object as the first argument and the source object as the second argument. The method copies the values of all enumerable own properties from the source object to the target object and returns the target object.  
+Object.assign(source, target);
+console.log(source);
+// The output would be { b: 4, c: 5, a: 1 } because the Object.assign() method has been called with the source object as the first argument and the target object as the second argument. The method copies the values of all enumerable own properties from the target object to the source object and returns the source object.
+
+let person3 = {name: "Isaac"};
+let person4 = {age: 30, city: "Abuja"};
+Object.assign(person3, person4);
+console.log(person3);
+// The output would be { name: "Isaac", age: 30, city: "Abuja" } because the Object.assign() method has been called with the person3 object as the first argument and the person4 object as the second argument. The method copies the values of all enumerable own properties from the person4 object to the person3 object and returns the person3 object.
+
+let combined = Object.assign({}, person3, person4);
+console.log(combined);
+// The output would be { name: "Isaac", age: 30, city: "Abuja" } because the Object.assign() method has been called with an empty object as the first argument, the person3 object as the second argument, and the person4 object as the third argument. The method copies the values of all enumerable own properties from the person3 and person4 objects to the empty object and returns the new combined object.
