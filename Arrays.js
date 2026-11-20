@@ -255,3 +255,102 @@ console.log(sumOfPrices);
 
  console.log(numbers4);
 // The output would be 220 because the numbers4 variable has been created by chaining the filter(), map(), and reduce() methods together.
+
+                                    //  REVERSE METHOD
+//  The reversed method is used to reverse the arrangement of the elememts in an array. The first one becomes the last while the last becomes the first. It affects the original array.
+
+const letters = [ "a", "b","c","d","e","f"];
+const reversedLetters = letters.reverse();
+console.log(reversedLetters);
+console.log(letters);
+
+const lettersSpread = [ "g", "h","i","j","k","l"];
+
+const spreadReserved = [...lettersSpread].reverse();
+console.log(spreadReserved);
+console.log(lettersSpread);
+
+
+                            //    toReversed method
+
+ // The toReversed method is used to reverse the arrangement of the elememts in an array. The first one becomes the last while the last becomes the first. It does not affects the original array.
+
+ const numbers6 = [1,2,3,4,5,6,7,8,9];
+ const reserved = numbers6.toReversed();
+ console.log(reserved);
+ console.log(numbers6);
+
+
+                            //   sort() method
+
+//      without parameters
+
+// sort() method without parameters is mostly used on strings data types.
+
+const letters2 = [ "g", "a","z","y","b","l"];
+const sortedLetters = letters.sort();
+console.log(sortedLetters);
+
+// With parameters
+
+const num1 = [3, 7,23,11,14,76,99,98];
+const sortedNum1 = num1.sort( (a,b) => a - b  );  
+
+// Accending order
+console.log(sortedNum1);
+
+const sortNum1 = num1.sort( (a,b) => b - a  );  
+ console.log(sortNum1);
+
+ const product3 = [
+    {name:"Laptop", price: 10000, instore: true},
+    {name: "Monitor", price: 200000, instore: false},
+    {name: "iPhone", price: 450000, instore: true},
+    {name: "Samsung", price: 5000, instore: false}
+ ];
+
+ const product4 = product3.sort((a, b ) =>  (b.name).localeCompare(a.name));
+
+ console.log(product4);
+
+ const productPrice = product3.sort( (a, b) => (b.price) - (a.price));
+
+ console.log(productPrice);
+
+
+//    CLASS ACTIVITY
+
+const students = [
+    {name: "Serah",   score: 76 , age: 22  },
+    {name: "Micheal", score: 90,  age: 23 },
+    {name: "John",    score: 56 , age: 21 },
+    {name: "Grace",   score: 57,  age: 18 },
+    {name: "Esther",  score: 34 , age: 66 },
+    {name: "Olivia",  score: 99 , age: 20 },
+    {name: "Aisha",   score: 98 , age: 28 } 
+    
+]
+
+// sorting by name
+
+const studentsName = students.sort( (a, b) => (a.name).localeCompare(b.name));
+console.log(studentsName);
+
+// sorrting by score
+
+const studentsScore = students.sort( (a,b) => a.score - b.score);
+
+console.log(studentsScore);
+
+// sorting by score and name
+
+const sortedStudent = students.sort ((a,b) => {
+
+    if (a.score !== b.score) {return a.score - b.score }
+       
+ return  (a.name).localeCompare(b.name);
+});
+
+console.log(sortedStudent);
+
+
